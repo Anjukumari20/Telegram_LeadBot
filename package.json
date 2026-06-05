@@ -1,0 +1,13 @@
+{
+  "name": "telegram-lead-system",
+  "version": "1.0.0",
+  "description": "Run the full stack with a single npm start",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "setup": "npm install && npm run install:all"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
